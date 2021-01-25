@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactor </title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            max-width: 50%;
+            margin: 0 auto;
+            max-height: 50vh;
+        }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .headers,.paragraph-tag,.para-with-bold,.para-with-italic{
+            padding: 1rem 0;
+        }
+        .headers{
+            background-color: gray;
+        }
+        .paragraph-tag{
+            background-color: rebeccapurple;
+        }
+        .para-with-bold{
+            background-color: greenyellow;
+            color: black;
+        }
+        .para-with-italic{
+            background-color: burlywood;
+        }
+        .links-div{
+            background-color: cadetblue;
+            padding: 1rem 0;        
+        }
+        .links-header{
+            font-size: 5rem;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: solid;
+        }
+        .links-div a{
+            color: black;
+            padding-bottom: 1rem;
+            font-size: 2rem;
+            line-height: 2;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: .2s ease-in-out;
+        }
+        .links-div a:hover{
+            transition: .2s ease-in-out;
+            color: rgb(199, 154, 154);
+            text-decoration: underline overline;
+            text-decoration-style: wavy;
+            text-underline-position: right under;
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+        .more-tag-div{
+            background-color: blueviolet;
+            color: white;
+        }
+        .more-tag-div h2 {
+            font-size: 3rem;
+            color: wheat;
+            text-shadow: 0 10px 10px black;
+            letter-spacing: 1px;
+        }
+        .more-tag{
+            display: inline-flexbox;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .more-tag li{
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="headers">
+        <h1 class="headers-h1">this is <code>h1</code> tag</h1>
+        <h2 class="headers-h2">this is <code>h2</code> tag</h2>
+        <h3 class="headers-h3">this is <code>h3</code> tag</h3>
+        <h4 class="headers-h4">this is <code>h4</code> tag</h4>
+        <h5 class="headers-h5">this is <code>h5</code> tag</h5>
+        <h6 class="headers-h6">this is <code>h6</code> tag</h6>
+    </div>
+
+    <div class="paragraph-tag">
+        <p>this is a <code>p</code> tag (paragraph) in html</p>
+    </div>
+
+    <div class="para-with-bold">
+        <h2>paragraph with <code>b</code> (bold) tag:</h2>
+        <p>Lorem Ipsum is simply dummy text of the 
+            printing and typesetting industry. Lorem Ipsum 
+            has been the industry's standard dummy text 
+            ever since the 1500s, when an unknown printer took a galley 
+            of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, 
+            <b> but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised 
+            in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing 
+            software like Aldus PageMaker</b> 
+            including versions of Lorem Ipsum.</p>
+    </div>
+    <div class="para-with-italic">
+        <h2>paragraph with <code>i</code> (italic) tag:</h2>
+        <p>Lorem Ipsum is simply dummy text of the 
+            printing and typesetting industry. Lorem Ipsum 
+            has been the industry's standard dummy text 
+            ever since the 1500s, when an unknown printer took a galley 
+            of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, 
+            <i> but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised 
+            in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing 
+            software like Aldus PageMaker</i> 
+            including versions of Lorem Ipsum.</p>
+    </div>
+    <div class="links-div">
+        <h2 class="links-header">links:</h2>
+        <a href="http://google.com" target="_blank">Google</a><br>
+        <a href="https://www.appleseeds.org.il/" target="_blank">Appleseeds Academy</a><br>
+        <a href="https://www.microsoft.com/" target="_blank">microsoft</a><br>
+        <a href="https://www.tesla.com/" target="_blank">tesla</a><br>
+    </div>
+    <div>
+        <h2>random <code>img</code> (image) from unsplash website:</h2>
+        <img src="https://source.unsplash.com/random" style="width: 100%;height: auto;">
+    </div>
+
+    <div>
+        <h2>local <code>img</code> (image) from my pc: (probably unseen in online mode... because it's just an html page...)</h2>
+        <img src="./local-img.jpg" style="width: 100%;height: auto;">
+    </div>
+
+
+    <div class="more-tag-div">
+        <h2>5 more markup elements:</h2>
+        <ol class="more-tag">
+            <li><p><u>underline text with <code>u</code> tag</u></p></li>
+            <li><p><small>secondary text with <code>small</code> tag</small></p></li>
+            <li><blockquote cite="http://www.google.com"><p>blockquote text with <code>blockquote</code> tag</blockquote></p></li>
+            <li><p><mark>mark text with <code>mark</code> tag</mark></p></li>
+            <li><p><code>code text with code tag</code></p></li>
+        </ol>
+    </div>
+</body>
+</html>
