@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap" rel="stylesheet">  <style>
+    body{
+      background-image:linear-gradient(90deg,rgb(197, 175, 175),rgb(9, 3, 26));
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      height: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    main{
+      width: 80%;
+      margin: 0 auto;
+    }
+    main,footer{
+      text-align: center
+    }
+    h1{
+      font-size: 3rem;
+      margin: 0;
+      color: aqua;
+      margin: 0;
+      text-shadow: 0 -3px 10px black;
+      font-family: 'Yusei Magic', sans-serif;
+    }
+    h3{
+      text-decoration: underline overline;
+      text-underline-position: under;
+      font-size: 2rem;
+      margin: 2rem 0;
+      text-shadow: 0 -3px 50px rgb(169, 200, 207);
+      font-family: 'Potta One', cursive;
+      font-weight: 100;
+      letter-spacing: 1px;
+
+    }
+    .parag{
+      max-width: 60%;
+      margin: 0 auto;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .parag a {
+      padding: 0;
+      margin: 0;
+      font-size: 1.8rem;
+
+    }
+    p{
+      font-size: 1.8rem;
+      font-weight: 100;
+    }
+    img{
+      width: 150px;
+      border-radius: 50%;
+    }
+    footer{
+      margin: 5rem 0;
+    }
+    a{
+      text-decoration: none;
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      color: rgb(81, 163, 33);
+      transition: .3s ease-in-out;
+    }
+    a:hover{
+      color: rgb(134, 190, 162);
+      transition: .3s ease-in-out;
+    }
+    a:active{
+      color: blue;
+      transition: .1s ease-in-out;
+    }
+
+    .card{
+      position: relative;
+      display: inline-block;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 4px 20px black;
+      padding: .5rem 1.5rem;
+      margin: 0.2rem .8rem;
+      width: 25%;
+      max-width: 60%;
+
+      transition: .3s ease-in-out;
+      background-color: white;
+      color: black;
+      border-radius: 7px;
+    }
+    .card:hover{
+      box-shadow: 0 8px 40px black;
+      transition: .3s ease-in-out;
+      transform: scale(1.01);
+    }
+    .projects-header{
+      color: white;
+      text-shadow: 0 4px 10px black;
+      font-size: 1px + 15vw;
+      margin: 1rem 0;
+    }
+    .card h1{
+      background: -webkit-linear-gradient(18deg,rgb(27, 151, 38),aqua);
+      -webkit-background-clip: text;
+      font-weight: bold;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+      font-size: calc(20px + 2vh);
+
+    }
+    .card p{
+      min-height: 150px;
+    }
+    .card a{
+      background-color: brown;
+      color: white;
+      border-radius: 7px;
+    }
+    .card a:hover{
+      transform: scale(2);
+      padding: .1rem 1.5rem;
+    }
+    .social{
+      margin: 5rem 0 3rem 0;
+      font-size: 2.5rem;
+      font-weight: 100;
+    }
+    footer a i {
+      font-size: 3rem;
+      padding: 0 2rem;
+      transition: .15s ease-in-out;
+      margin: 1rem 0;
+
+    }
+    footer a{
+      color: rgb(147, 214, 203);
+    }
+    footer a i:hover{
+      color: rgb(35, 10, 54);
+      transform: scale(1.25);
+      transition: .15s ease-in-out;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .card{
+          width: 50%;
+          margin: .5rem 0;
+        }
+        h1{
+          font-size: 2.5rem;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .card{
+          width: 95%;
+          margin: .5rem 0;
+        }
+        main{
+          width: 95%;
+          margin: 0 auto;
+        }
+        h1{
+          font-size: 2rem;
+        }
+    }
+  </style>
+  <title>Gurel Ben Shabat Portfolio</title>
+</head>
+<body>
+  <main>
+    <div>
+      <img src="https://media-exp1.licdn.com/dms/image/C5603AQF7YnHH8ZUH8Q/profile-displayphoto-shrink_800_800/0/1516970192092?e=1617235200&v=beta&t=_UG-j0OONhb8H8yVYWkES8H0dPGgY8-0T8nICZB-x3Q" alt="gurel ben shabat">
+      <h1>Gurel Ben Shabat</h1>
+      <h3>FrontEnd Developer</h3>
+    </div>
+    <div class="parag">
+      <p>In my free time I'm learning philosophy at the Open University of israel and Linux OS on my new Raspberry Pi. i'm love seeing cool tricks in CSS from YouTube and from <a href="https://css-tricks.com/" target="_blank">this website</a>.
+        <br><br> The last project I am working on is a voice assistant in Hebrew! <br> you can use demo <a href="https://gurelbs.github.io/hebrew-voice/" target="_blank">here</a></p>
+      </div>
+      <div class="top-project">
+        <h1 class="projects-header">Top Projects:</h1>
+        <div class="card">
+          <h1>Speech Recognition</h1>
+          <hr>
+          <p>App for speech recognition and automatic translation to Hebrew with Voice commands</p>
+          <a href='https://milim.cf/' target="_blank">Click Here</a>
+        </div>
+        <div class="card">
+          <h1>Philosophical Glossary of Terms</h1>
+          <hr>
+          <p>An app for philosophical terms, ideas and theories from ancient Greece to modern times</p>
+          <a href='https://aristo.cf/' target="_blank">Click Here</a>
+        </div>
+        <div class="card">
+          <h1>Top 100 Cryptocurrency</h1>
+          <hr>
+          <p>Top 100 Cryptocurrency by market cap. prices, 24 hours change and more.</p>
+          <a href='https://cryptoil.cf/' target="_blank">Click Here</a>
+        </div>
+      </div>
+      
+  </main>
+  <footer>
+    <h4 class="social">Follow me</h4>
+    <div>
+        <a href="https://www.facebook.com/gurelbs/" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>    
+        <a href="https://github.com/gurelbs" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>    
+        <a href="https://www.linkedin.com/in/gurelbs/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>    
+    </div>
+  </footer>
+</body>
+</html>

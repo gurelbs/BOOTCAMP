@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(56, 56, 93);
+      color: white;
+      font-weight: 100;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    button{
+      border: none;
+      background-color: transparent;
+      color: white;
+      padding: .5rem 2rem;
+      outline: none;
+      cursor: pointer;
+    }
+    button:active{
+      transform: scale(0.95);
+    }
+    .all-btn{
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .flat .btn-1{
+      background-color: rgb(100, 173, 100);
+    }
+    .flat .btn-2{
+      background-color: red;
+      padding: .3rem 1.5rem;
+    }
+    .flat .btn-3{
+      background-color: rgb(125, 69, 189);
+      padding: .25rem 1rem;
+    }
+    .round .btn-4{
+      background-color: orange;
+      border-radius:30px;
+    }
+    .round .btn-5{
+      background-color: rgb(221, 221, 19);
+      border-radius:30px;
+      padding: .25rem 1rem;
+    }
+    .round .btn-6{
+      background-color: gray;
+      border-radius:30px;
+      padding: .25rem 1rem;
+    }
+    .flat-ghost .btn-7{
+      border: 2px solid rgb(100, 173, 100);
+    }
+    .flat-ghost .btn-8{
+      border: 2px solid red;
+      padding: .3rem 1.5rem;
+    }
+    .flat-ghost .btn-9{
+      border: 2px solid rgb(125, 69, 189);
+      padding: .25rem 1rem;
+    }
+    .round-ghost .btn-10 {
+      border: 2px solid  orange;
+      border-radius:30px;
+    }
+    .round-ghost .btn-11 {
+      border: 2px solid   rgb(221, 221, 19);
+      border-radius:30px;
+      padding: .25rem 1rem;
+
+    }
+    .round-ghost .btn-12 {
+      border: 2px solid rgb(125, 69, 189);
+      border-radius:30px;
+      padding: .25rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="all-btn">
+    <div class="flat">
+      <h2>flat</h2>
+      <button class="btn-1">Register</button>
+      <button class="btn-2">Clear</button>
+      <button class="btn-3">Submit</button>
+    </div>
+    <div class="round">
+      <h2>Round</h2>
+      <button class="btn-4">Register</button>
+      <button class="btn-5">Clear</button>
+      <button class="btn-6">Submit</button>
+    </div>
+    <div class="flat-ghost">
+      <h2>flat ghost</h2>
+      <button class="btn-7">Register</button>
+      <button class="btn-8">Clear</button>
+      <button class="btn-9">Submit</button>
+    </div>
+    <div class="round-ghost">
+      <h2>round ghost</h2>
+      <button class="btn-10">Register</button>
+      <button class="btn-11">Clear</button>
+      <button class="btn-12">Submit</button>
+    </div>
+  </main>
+</body>
+</html>
