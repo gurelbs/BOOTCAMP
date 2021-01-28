@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.first-div{
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  padding: 2rem 10rem;
+  background: #eee;
+}
+.first-div .about {
+  float: left;
+  width: 50%;
+} 
+.first-div .circle-img {
+  float: right;
+  max-width: 50%;
+  margin: 0 auto;
+} 
+.circle-img img {
+  border-radius: 50%;
+  height: 250px;
+}
+.about h2 {
+  font-size: 2.5rem;
+}
+.about span{
+  padding: 0 1rem 0 0;
+}
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+.circle-img {
+  border-radius: 50%;
+  float: left;
+}
+.about-cover-logo{
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
+.about-cover{
+  min-height: 80vh;
+  position: relative;
+  background: url('https://source.unsplash.com/random/1366x400') no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+}
+
+.guests-1,.guests-2{
+  width: 70%;
+  margin: 2rem auto;
+  background-color: rgba(228, 109, 88, 0.8);
+  display: flex;
+}
+.about-cover div {
+  height: 151px;
+  padding: 2rem;
+}
+.about-cover p {
+  padding: 1rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,202 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+  min-width: 100%;
+  min-height: 100vh;
+}
+nav{
+  display: inline-flex;
+  background-color: rgb(66, 150, 189);
+  color: white;
+  max-width: 100%;
+  width: 100%;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  padding: 10px;
+}
+ul{
+  list-style: none;
+  position: relative;
+  direction: rtl;
+  width: 100%;
+  margin: auto 0;
+}
+ul li {
+  float: right;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 50px;
+
+}
+ul li a{
+  text-decoration: none;
+  padding: 21px 10px;
+  color: white;
+  transition: .05s ease-in-out;
+}
+ul li a:hover{
+background-color: rgb(27, 80, 131);
+transition: .25s ease-in-out;
+
+}
+.logo{
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0 50px;
+  color: white;
+}
+.cover{
+  min-height: 80vh;
+  position: relative;
+  background: url('https://source.unsplash.com/random/1366x500') no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+}
+.cover::before{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  top: 0;
+  min-height: 80vh;
+  min-width: 100%;
+}
+.cover-logo{
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+.nice{
+  color: tomato;
+}
+.cover p,.div-btn,.cover-logo {
+  color: white;
+  max-width: 60%;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  position: relative;
+  top: 5rem;
+}
+.cover p{
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.div-btn{
+  margin: 3rem auto 0 auto ;
+}
+.cover button{
+  position: relative;
+  margin:  0 auto;
+  width: 30%;  
+  border: none;
+  color: white;
+  background-color: tomato;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  transition: .2s ease-in-out;
+  border: 1px solid black;
+  outline: none;
+}
+.cover button:hover{
+  background-color: rgb(69, 117, 117);
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+.cover button:active{
+  background-color: rgb(42, 71, 71);
+  outline: none;
+  transition: .1s ease-in-out;
+  transform: scale(0.98);
+}
+.secondary-div{
+  display: dis;
+}
+.secondary-div .seconday-img{
+  width: 50%;
+  height: 320px;
+  float: left;
+}
+.secondary-div .secondary-text-div {
+  float: right;
+  width: 50%;
+  height: 320px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  background-color: darkslategrey;
+  color: white;
+}
+.secondary-text-div h3,.secondary-text-div p {
+  margin: 3rem auto;
+  max-width: 80%;
+}
+.secondary-div button {
+  background-color: tomato;
+  border: none;
+  padding: .75rem 2rem;
+  color: white;
+  cursor: pointer;
+  transition: .25s ease-in-out;
+  outline: none;
+}
+
+.secondary-div button:hover {
+  background-color: rgb(231, 76, 49);
+  outline: none;
+  transition: .25s ease-in-out;
+}
+.secondary-div button:active {
+  background-color: rgb(212, 70, 45);
+  outline: none;
+  transition: .25s ease-in-out;
+  transform: scale(0.98);
+}
+.last-div {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #eee ;
+  margin: auto auto;
+  min-height: 300px;
+  display: flex;
+}
+.last-div div{
+  display: inline-block;
+  width: 33%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eee;
+  position: relative;
+  padding: 50px 0;
+}
+.last-div p, .last-div h4{
+  color: rgb(27, 27, 27);
+  padding: .75rem 0;
+}
+.last-div i {
+  font-size: 3.5rem;
+  color: rgb(233, 108, 86);
+  padding: 15px 0 ;
+}
+.feature-1 p,.feature-2 p,.feature-3 p {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.feature-2{
+  background-color: tomato !important;
+}
+.feature-2 i {
+  color: white;
+}
+footer{
+  text-align: center;
+  background-color: darkslategrey;
+  padding: 1.5rem 0;
+  color: white;
+}

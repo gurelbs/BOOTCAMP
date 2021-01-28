@@ -1,0 +1,79 @@
+.contact{
+  width: 80%;
+  margin: 0 auto;
+}
+.contact h1{
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+.contact p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+
+}
+form input, form label {
+  display: block;
+  width: 100%;
+}
+form input,textarea{
+  display: block;
+  width: 100%;
+  margin: .5rem 0;
+  border: #eee 1px solid;
+  padding: 1rem 2rem;
+  outline: none;
+
+}
+form input:focus,form textarea:focus{
+  outline: .5px solid orange;
+  border: none;
+}
+.contact button {
+  background-color: darkslategray;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.contact button:hover {
+  background-color: tomato;
+  color: white;
+}
+.last-div-contact{
+  display: inline-block;
+  width: 100%;
+  margin:auto;
+  text-align: center;
+  background-color:rgb(75, 59, 59);
+  min-height: 300px;
+  position: relative;
+  padding: 50px 0;
+}
+.last-div-contact div{
+  display: inline-block;
+  width: 33%;
+  margin:auto;
+  text-align: center;
+  min-height: 300px;
+  position: relative;
+  padding: 50px 0;
+  color: white;
+}
+.last-div-contact h4,.last-div-contact p {
+  margin: 1rem auto;
+}
+.last-div-contact h4{
+  font-size: 1.5rem;
+}
+.last-div-contact p{
+  font-size: 1.2rem;
+  max-width: 90%;
+  text-align: center;
+  
+}
+.last-div-contact i {
+  font-size: 5rem;
+}

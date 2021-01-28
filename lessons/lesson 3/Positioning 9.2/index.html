@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positioning </title>
+  <style>
+    .container{
+      display: flex;
+    }
+    #outer {
+      width: 100px;
+      height: 100px;
+      background: darkcyan;
+      margin: 50px;
+      position: relative;
+    }
+    #inner {
+      width: 50px;
+      height: 50px;
+      background: lightgreen;
+      position: relative;
+      margin: 10px 0 0 0 ;
+    }
+    p{
+      margin: 0;
+      top: 0;
+      position: relative;
+    }
+    .para-1{
+      font-size: .5rem;
+    }
+    .para-2{
+      font-size: 1rem;
+    }
+    .para-3{
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<!-- the problem is Because we use position absolute instead of reltive.
+we should use reltaive  - it's positioned relative to its normal position.-->
+<body>
+  <div class="container">
+    <div id="outer">
+      <p class="para-1">Box title</p>
+      <div id="inner"></div>
+    </div> 
+    <div id="outer">
+      <p class="para-2">Box title</p>
+      <div id="inner"></div>
+    </div> 
+    <div id="outer">
+      <p class="para-3">Box title</p>
+      <div id="inner"></div>
+    </div>
+  </div>   
+</body>
+</html>
