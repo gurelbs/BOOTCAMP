@@ -2,4 +2,4 @@
 
 # Bootcamp lessons <a href="https://github.com/gurelbs/BOOTCAMP/tree/main/lessons">here<a/>
 
-# Weekend assignments <a href="">Here</a>
+# Weekend assignments <a href="#">Here</a>
