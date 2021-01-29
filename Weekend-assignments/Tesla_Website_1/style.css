@@ -30,7 +30,7 @@ section{
   display: flex;
   justify-content: space-between;
 }
-nav{
+.header nav{
   height: 52px;
   padding: .75rem 1.5rem;
 }
@@ -439,13 +439,158 @@ nav ul li a{
 .section-8 div{
   width: 50%;
 }
+.section-8 .img-wrap{
+  background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/2b239404-c402-4c55-9a10-a061f2cf0ae8/bvlatuR/std/947x677/global-spec-hero') no-repeat center center;
+  height: auto;
+  background-size: contain;
+  background-color: black;
+}
 .section-8 .img-wrap img{
-  height: 100vh;
+  height: auto;
   width: 100%;
+  position: relative;
 }
 .section-8 .info{
   background-color: black;
+  color: white;
 }
+.section-8 .info .light{
+  font-weight: 200;
+}
+.section-8 .info h1 {
+  padding: 2rem 0 0 3.5rem;
+  font-size: 1.5rem;
+}
+.section-8 .flex-info {
+  display: flex;
+  width: 80%;
+  padding: 0 3rem;
+}
+.section-8 .flex-info button{
+  border: 3px solid rgb(70, 70, 70);
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+  padding: .5rem 1.5rem;
+  margin: .3rem 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.section-8 .flex-info button:focus{
+  border: 3px solid#eee;
+  border-radius: 30px;
+  outline: none;
+}
+.section-8 .flex-info .compare{
+  background-color: rgb(70, 70, 70);
+  border: 3px solid rgb(70, 70, 70);
+}
+.section-8 .flex-info div {
+  width: 50%;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+.flex-info h6::before{
+  display: block;
+  content: '';
+  background-color: hsla(0,0%,100%,.5);
+  inline-size: 30px;
+  block-size: 1px;
+  margin: .5rem 0;
+}
+.flex-info h6{
+  margin: .5rem 0;
+  font-size: .75rem;
+}
+.flex-info p {
+  padding: 0 0 1rem 0;
+  font-size: .8rem;
+}
+.section-9 {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+.section-9 .flex-info{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.section-9 .flex-info div{
+  width: 50%;
+}
+.section-9 .flex-info .info{
+  margin: auto;
+}
+.section-9 .flex-info .info h1{
+  margin: 0 auto;
+  text-align: center;
+}
+.section-9 .flex-info .info .info-btns{
+  margin: 0 auto;
+  text-align: left;
+  padding: 1rem 0;
+  
+}
+.section-9 .flex-info .info .info-btns button{
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.section-9 .flex-info .info .info-btns button a{
+  position: relative;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: .45rem 2.5rem;
+  outline: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  text-decoration: none;
+  transition: .25s ease-in-out;
+
+}
+.section-9 .flex-info .info .info-btns button .order-now {
+  background-color: white;
+  color: black;
+}
+.section-9 .flex-info .info .info-btns button .compare:hover {
+  background-color: white;
+  color: black;
+  transition: .25s ease-in-out;
+}
+.section-9 .img-wrap {
+  background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/457dd9fa-6e32-43b1-a6cf-9b3d76e9e181/bvlatuR/std/2232x720/global-order-hero') no-repeat center center;
+  background-size: 100%;
+  height: auto;
+  width: 100%;
+}
+.section-9 nav {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.section-9 nav ul{
+  margin-bottom: 1.5rem;
+}
+.section-9 nav ul li a{
+  font-size: .7rem;
+  font-weight: 500;
+  padding: 0 .5rem;
+}
+
+
+
+
+
 @media only screen and (max-width: 800px) {
   .mobile-hidden{
     display: none;
