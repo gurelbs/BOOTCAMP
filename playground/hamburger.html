@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hamburger</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    position: relative;
+    background-color: blueviolet;
+    width: 100vw;
+    height: 100vh;
+  }
+  .outer{
+    height: 50vh;
+    width: 50vw;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .inner{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: wheat;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+</style>
+<body>
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+.container{
+  min-width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+nav{
+  display: block;
+  padding: 0;
+}
+ul{
+  direction: initial;
+  margin:0;
+}
+ul li {
+  float: none;
+  text-align: center;
+  padding: 0;
+}
+ul li a{
+  display: block;
+  padding: .25rem 0;
+}
+ul li a:hover{
+background-color: transparent;
+color: pink;
+transition: .25s ease-in-out;
+}
+.logo{
+  text-align: center;
+  display: block;
+  padding-bottom: 1rem;
+}
+.logo:hover{
+  color: rgb(73, 199, 199);
+}
+.div-btn{
+  margin: 0 auto ;
+}
+.cover button{
+  position: relative;
+  margin: 1rem auto;
+  width: 100%;  
+  height: auto;
+}
+.cover p,.div-btn,.cover-logo {
+  color: white;
+  max-width: 80%;
+  margin: 0 auto;
+  top: 0;
+}
+.secondary-div .seconday-img{
+  display: none;
+}
+.secondary-div .secondary-text-div {
+  float: none;
+  width: 100%;
+  height:100%;
+  margin: 0 auto;
+}
+.secondary-text-div h3,.secondary-text-div p {
+  margin: 0rem auto;
+  max-width: 80%;
+  padding: 1rem;
+}
+.secondary-div button {
+  margin: 1rem;
+}
+.last-div {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #eee ;
+  margin: auto auto;
+  min-height: 100%;
+  display: block;
+}
+.last-div div{
+  display: block;
+  width: 100%;
+}
+.first-div{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: #eee;
+  text-align: center;
+}
+.first-div .about {
+  float: none;
+  width: 100%;
+} 
+.first-div .circle-img {
+  float: none;
+  max-width: 100%;
+} 
+.about-cover{
+  padding: 1rem;
+}
+.guests-1,.guests-2{
+  width: 90%;
+  margin: 1rem auto;
+  background-color: rgba(228, 109, 88, 0.8);
+  display: ruby-text-container;
+  height: auto;
+  position: relative;
+}
+.about-cover div {
+  height: 100%;
+  padding: 1rem;
+}
+.guests-1 img,.guests-2 img{
+  width: 150px;
+  height: 150px;
+}
+.last-div-contact{
+  padding: 0;
+}
+.last-div-contact div{
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  border-bottom: 1px dashed black;
+  transition: 0.25s ease-in-out;
+}
+.last-div-contact div:hover{
+  background-color: gray;
+  transition: 0.25s ease-in-out;
+}
+.last-div-contact h4,.last-div-contact p {
+  margin: 0 auto;
+}

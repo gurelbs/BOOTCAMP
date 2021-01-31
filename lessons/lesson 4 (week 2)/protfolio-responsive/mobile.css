@@ -1,0 +1,25 @@
+nav a{
+  display: block;
+}
+main{
+  width: 100%;
+  margin: 0;
+}
+.parag{
+  max-width: 90%;
+}
+.card{
+  display: block;
+  padding: .5rem 1.5rem;
+  margin: 0.5rem auto;
+  width: 85%;
+  max-width: 85%;
+}
+footer{
+  margin: 0  0 15vh 0;
+}
+.social{
+  margin:15vh 0 3rem 0;
+  font-size: 2.5rem;
+  font-weight: 100;
+}

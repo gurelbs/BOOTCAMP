@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-nav</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    nav{
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    ul{
+      list-style: none;
+      display: flex;
+    }
+    a{
+      text-decoration: none;
+      border: 1px solid black;
+      padding: 1rem;
+    }
+    @media (max-width: 678px){
+
+      nav,ul {
+        justify-content: center;
+        flex-direction: column;
+      } 
+      li {
+        border: 1px solid black;
+        margin: .5rem 0 ;
+      }
+      a{
+        border: none;
+    }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>logo</h1>
+    <ul>
+      <li><a href="#">nav item 1</a></li>
+      <li><a href="#">nav item 2</a></li>
+      <li><a href="#">nav item 3</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
