@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css var</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    :root{
+      --main-color: rgb(158, 117, 117);
+      --background: blue;
+      --main-h: calc(100vh - 90px);
+      --padding-main: 5rem 2rem;
+    }
+    header,footer {
+      color: var(--main-color);
+      background: var(--background);
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      place-items: center;
+      height: var(--main-h);
+      background-color: var(--main-color);
+      color: white;
+    }
+    main div {
+      padding: var(--padding-main);
+    }
+  </style>
+</head>
+<body>
+  <header>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero corrupti dolorum error magnam, delectus ex soluta accusantium est nesciunt sint eveniet obcaecati dolor, ipsum minus quibusdam id vero enim iusto, harum inventore! Qui impedit similique odio architecto consequatur exercitationem officiis voluptatibus molestiae officia quisquam maiores temporibus fuga autem laboriosam earum eligendi eveniet, amet dolorem dolore doloribus repellat nihil! Exercitationem aut provident ea eos, placeat natus, voluptatem nemo, quia unde ullam ducimus obcaecati adipisci. Aliquam voluptatum nesciunt ducimus velit amet. Error, recusandae deserunt. Consequatur ducimus odio magni molestias iste itaque maiores sed ipsam assumenda eos ut, ipsa earum ipsum libero expedita?</header>
+  <main>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nobis veniam beatae, pariatur quasi ratione officiis expedita ad, hic atque, incidunt distinctio nihil omnis praesentium repellat neque optio. Ratione hic possimus fugiat pariatur provident perspiciatis totam deserunt iste esse iure. Rem unde expedita autem quis sit, saepe animi nemo officia.</div>
+    <div>Doloribus velit suscipit error nihil iure ullam distinctio sunt, culpa laboriosam. Vitae dicta esse eveniet quod eum, molestiae a! Doloribus nemo necessitatibus ex magni! Animi praesentium dolore ut! Rerum ipsum voluptatum minus doloribus, dignissimos nam labore repellat corrupti harum modi culpa id velit? Aliquid quasi aliquam quia nihil, sunt consectetur!</div>
+  </main>
+  <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur!</footer>
+</body>
+</html>

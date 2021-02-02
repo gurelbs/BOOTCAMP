@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>simple transition</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+      display: flex;
+      place-items: center;
+      justify-content: center;
+    }
+    .container{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      place-items: center;
+      justify-content: center;
+    }
+    .box{
+      transition: 0.25s ease-in-out;
+      width: 300px;
+      height: 300px;
+      background-color: aqua;
+      position: relative;
+    }
+    .box::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      overflow: hidden;
+      transition: 0.25s ease-in-out;
+    }
+    .box:hover::before{
+      animation: anima 3s ease-in-out;
+      transition: 0.25s ease-in-out;
+      left: 0;
+      background-color: green;
+    }
+    @keyframes anima {
+      50% {
+        transition: 2s ease-in-out;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
