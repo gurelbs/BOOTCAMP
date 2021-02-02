@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tooltip</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .container{
+    padding: 3rem;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .box{
+    padding: 2rem;
+  }
+  h1{
+    color: wheat;
+    font-size: 2.5rem;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+  a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+  }
+  .tooltip{
+    position: relative;
+  }
+  .tooltip .tooltiptext{
+    visibility: hidden;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    padding: 0.25rem;
+    color: white;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%,-15px);
+    font-size: 1rem;
+  }
+  .tooltip .tooltiptext{
+    background-color: black;
+  }
+  .tooltip .tooltiptext::after{
+    content: '';
+    background-color: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 15px solid black;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+  .tooltip:hover .tooltiptext{
+    visibility: visible;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1>header</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <a href="#" class="tooltip">hover to tooltip<span class="tooltiptext">Im a tooltip!!</span></a> Iusto, sunt repellendus quis beatae dolorem quam perspiciatis minus, ea in necessitatibus officia totam quos corporis repudiandae expedita cupiditate accusantium ad optio. Maiores error molestias, nam non, vel ipsam officia modi laudantium obcaecati fugiat natus quae quod blanditiis velit rerum animi doloribus reprehenderit nobis praesentium necessitatibus rem officiis doloremque fuga. Natus excepturi doloremque magni consequatur molestias suscipit facilis exercitationem omnis cum veritatis recusandae, officia nostrum? Nesciunt explicabo, nam quas architecto impedit laboriosam adipisci voluptatibus quae corrupti totam iusto excepturi. Voluptate excepturi, nemo obcaecati adipisci, laudantium delectus, distinctio inventore architecto laborum aspernatur voluptatum!</p>
+    </div>
+    <div class="box">
+      <h1>header</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <a href="#" class="tooltip">enter to see some tooltip<span class="tooltiptext">Im a tooltip!!</span></a> Iusto, sunt repellendus quis beatae dolorem quam perspiciatis minus, ea in necessitatibus officia totam quos corporis repudiandae expedita cupiditate accusantium ad optio. Maiores error molestias, nam non, vel ipsam officia modi laudantium obcaecati fugiat natus quae quod blanditiis velit rerum animi doloribus reprehenderit nobis praesentium necessitatibus rem officiis doloremque fuga. Natus excepturi doloremque magni consequatur molestias suscipit facilis exercitationem omnis cum veritatis recusandae, officia nostrum? Nesciunt explicabo, nam quas architecto impedit laboriosam adipisci voluptatibus quae <a href="#" class="tooltip">hover to tooltip<span class="tooltiptext">Im a tooltip!!</span></a>corrupti totam iusto excepturi. Voluptate excepturi, nemo obcaecati adipisci, laudantium delectus, distinctio inventore architecto laborum aspernatur voluptatum!</p>
+    </div>
+  </div>
+</body>
+</html>
