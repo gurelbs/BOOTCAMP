@@ -60,78 +60,56 @@
       border-top: 1px solid rgb(255, 255, 255);
       animation: spinner 2s linear infinite 1s;
     }
-    .spinner-3::before{
-      content: '';
-      width: 25px;
-      height: 25px;
-      background-color: white;
-      opacity: .5;      
-      position: absolute;
-      border-radius: 50%;
-      right: 50px;
-      top: 0;
-      animation: spinner3 1s ease 0s infinite alternate;
-    }
-    .spinner-3{
-      content: '';
-      width: 25px;
-      height: 25px;
-      background-color: white;
-      opacity: .5;
+
+    .spinner-3, .spinner-4{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
       position: relative;
-      border-radius: 50%;
-      animation: spinner3 1s ease 0.4s infinite alternate;
-      }
-    .spinner-3::after{
-      content: '';
+      justify-content: space-evenly;
+    }
+    .spinner-3 > div {
       width: 25px;
       height: 25px;
-      top: 0;
-      left: 50px;
-      background-color: white;
-      opacity: .5;
-      position: absolute;
+      background-color: gray;
       border-radius: 50%;
-      animation: spinner3 1s ease 0.8s infinite alternate;
-      }
+      animation: spinner3 1s linear infinite;
+    }
+    .spinner-3 .dot-2 {
+      animation-delay: .2s;
+    }
+    .spinner-3 .dot-3 {
+      animation-delay: .4s;
+    }
     @keyframes spinner3 {
       50% {
-      opacity: 1;
+      background-color: white;
       }
     }
-    .spinner-4 {
+    .spinner-4 > div {
       width: 25px;
       height: 25px;
       background-color: white;
-      position: relative;
       border-radius: 50%;
-      animation: spinner4 .5s ease-in-out .1s infinite alternate;
+      animation: spinner4 1s infinite;
     }
-    .spinner-4::before {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: 50px;
-      top: 0;
-      background-color: white;
-      border-radius: 50%;
-      animation: spinner4 .5s ease-in-out 0s infinite alternate;
+    .spinner-4 .dot-2{
+      animation-delay: .15s;
     }
-    .spinner-4::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      left: 50px;
-      top: 0;
-      background-color: white;
-      border-radius: 50%;
-      animation: spinner4 .5s ease-in-out .3s infinite alternate;
+    .spinner-4 .dot-3{
+      animation-delay: .3s;
     }
     @keyframes spinner4 {
-      to {
+      0% {
+        transform-origin: initial;
+      }
+      30% {
         transform: translateY(-15px);
+        background-color: aqua;
+      }
+      60% {
+        transform-origin: initial;
       }
     }
   </style>
@@ -139,7 +117,15 @@
 <body>
   <div class="spinner-1"></div>
   <div class="spinner-2"></div>
-  <div class="spinner-3"></div>
-  <div class="spinner-4"></div>
+  <div class="spinner-3">
+    <div class="dot-1"></div>
+    <div class="dot-2"></div>
+    <div class="dot-3"></div>
+  </div>
+  <div class="spinner-4">
+    <div class="dot-1"></div>
+    <div class="dot-2"></div>
+    <div class="dot-3"></div>
+  </div>
 </body>
 </html>
