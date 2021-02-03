@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>galery</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: rgba(255, 68, 255, 0.027);
+        height: 100vh;
+        max-width: 100vw;
+      }
+      .container {
+        width: 80%;
+        height: 100%;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+      }
+      .container .gallery {
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(5,auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+          'item-1 item-2 item-2 item-3 item-3'
+          'item-1 item-4 item-4 item-5 item-5 '
+          'item-1 item-4 item-4 item-6 item-6'
+          'item-7 item-7 item-7 item-6 item-6'
+          'item-8 item-8 item-9 item-9 item-9'
+          'item-8 item-8 item-10 item-11 item-11'
+          'item-12 item-12 item-13 item-13 item-13'
+          'item-14 item-14 item-14 item-14 item-14'
+        ;
+        grid-gap: 1rem;
+      }
+      .container .gallery div {
+        box-shadow: inset 0 0px 10px black;
+        position: relative;
+        width: 100%;
+        min-height: 2.5rem;
+        margin: 0;
+        border-radius: 7px;
+        transition: .5s ease-in-out;
+
+      }
+      .item-1{
+        grid-area: item-1;
+        background: #333 url('./images/gal-1.jpeg') no-repeat center center/cover;
+        min-height: 82rem;
+
+      }
+      .item-2{
+        grid-area: item-2;
+        background: #333 url('./images/gal-2.jpeg') no-repeat center center/cover;
+        
+      }
+      .item-3{
+        grid-area: item-3;
+        background: #333 url('./images/gal-3.jpeg') no-repeat center center/cover;
+      }
+      .item-4{
+        grid-area: item-4;
+        background: #333 url('./images/gal-4.jpeg') no-repeat center center/cover;
+        min-height: 51.5rem;
+      }
+      .item-5{
+        grid-area: item-5;
+        background: #333 url('./images/gal-5.jpeg') no-repeat center center/cover;
+      }
+      .item-6{
+        grid-area: item-6;
+        background: #333 url('./images/gal-6.jpeg') no-repeat center center/cover;
+        min-height: 50rem;
+      }
+      .item-7{
+        grid-area: item-7;
+        background: #333 url('./images/gal-7.jpeg') no-repeat center center/cover;
+      }
+      .item-8{
+        grid-area: item-8;
+        min-height: 51.5rem;
+        background: #333 url('./images/gal-8.jpeg') no-repeat center center/cover;
+      }
+      .item-9{
+        grid-area: item-9;
+        background: #333 url('./images/gal-9.jpeg') no-repeat center center/cover;
+      }
+      .item-10{
+        grid-area: item-10;
+        background: #333 url('./images/gal-10.jpeg') no-repeat center center/cover;
+      }
+      .item-11{
+        grid-area: item-11;
+        background: #333 url('./images/gal-11.jpeg') no-repeat center center/cover;
+      }
+      .item-12{
+        grid-area: item-12;
+        background: #333 url('./images/gal-12.jpeg') no-repeat center center/cover;
+      }
+      .item-13{
+        grid-area: item-13;
+        background: #333 url('./images/gal-13.jpeg') no-repeat center center/cover;
+      }
+      .item-14{
+        grid-area: item-14;
+        background: #333 url('./images/gal-14.jpeg') no-repeat center center/cover;
+      }
+      .container .gallery div:hover{
+        transform: scale(1.1);
+        z-index: 1;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+      }
+      /* teblet */
+      @media (min-width: 501px) and (max-width: 868px) {
+        .container .gallery {
+        transition: 0.2s ease-in-out;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(5,auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+          'item-1 item-2 item-2 item-2 item-3'
+          'item-1 item-4 item-4 item-5 item-3 '
+          'item-1 item-4 item-4 item-6 item-6'
+          'item-7 item-7 item-7 item-6 item-6'
+          'item-8 item-8 item-9 item-9 item-9'
+          'item-8 item-8 item-10 item-11 item-11'
+          'item-12 item-12 item-13 item-13 item-13'
+          'item-14 item-14 item-14 item-14 item-14'
+        ;
+        grid-gap: 1rem;
+        }
+      }
+      @media (max-width: 500px){
+        .container .gallery {
+        transition: 0.2s ease-in-out;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+          'item-1 item-1 item-2 item-2'
+          'item-3 item-3 item-4 item-4'
+          'item-5 item-5 item-6 item-6'
+          'item-7 item-7 item-8 item-8'
+          'item-9 item-9 item-10 item-10'
+          'item-11 item-11 item-12 item-12'
+          'item-13 item-13 item-14 item-14'
+        ;
+        grid-gap: 1rem;
+        }     
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gallery">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+        <div class="item-6"></div>
+        <div class="item-7"></div>
+        <div class="item-8"></div>
+        <div class="item-9"></div>
+        <div class="item-10"></div>
+        <div class="item-11"></div>
+        <div class="item-12"></div>
+        <div class="item-13"></div>
+        <div class="item-14"></div>
+      </div>
+    </div>
+  </body>
+</html>
