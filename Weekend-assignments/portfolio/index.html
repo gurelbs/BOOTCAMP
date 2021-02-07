@@ -11,7 +11,7 @@
   <div class="container">
     <nav>
       <div>
-        <ul>
+        <ul class="menu">
           <li><a href="#home">home</a></li>
           <li><a href="#project">my project</a></li>
           <li><a href="#about">about me</a></li>
@@ -33,7 +33,7 @@
       <div class="name-with-title">
         <h1>I'm</h1>
         <h1>Gurel.</h1>
-        <p><span>Creative</span> Web Developer</p>
+        <p><span class="creative">Creative</span> Web Developer</p>
       </div>
     </header>
     <section class="project" id="project">
@@ -144,12 +144,12 @@
       </div>
       <div class="about-content">
         <p>Most of the time I am curious about something and always happy to learn something new. <br>
-          I recently turned 26 years old. and my main hobbies are chess, philosophy books and cryptocurrencies</p>
+          I recently turned 26 years old. my main hobbies are chess, philosophy books and cryptocurrencies</p>
       </div>
-      <form action="" class="form_about-section">
+      <form name="contact" method="POST" class="form_about-section" data-netlify="true">
         <h3>I would be happy if you contact me!</h3>
         <label for="name">what is your name?</label>
-        <input type="text" name="name" autofocus>
+        <input type="text" name="name">
         <label for="email">youe email address:</label>
         <input type="email" name="email">
         <label for="free-text">your massage</label>
@@ -158,5 +158,8 @@
       </form>      
     </section>
   </div>
+  <script>
+    window.scrollTo(0,0)
+  </script>
 </body>
 </html>
