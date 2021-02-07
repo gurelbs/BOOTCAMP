@@ -6,7 +6,6 @@
   scroll-behavior: smooth;
 }
 html {
-  height: 100vh;
   overflow: hidden;
 }
 body{
@@ -14,7 +13,6 @@ body{
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
-
 }
 section{
   scroll-snap-align: start;
