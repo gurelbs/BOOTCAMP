@@ -1,35 +1,39 @@
 let passwordValidation_1 = password => {
-  password = password.toString()
   if (password.length > 7){
-    return console.log(`Strong`);
+    return `Strong`
   } else {
-    return console.log(`Weak`);
+    return `Weak`
   } 
 }
 
-let passwordValidation_2 = password => {
-  password = password.toString()
-  return password.length > 7 ? console.log(`Strong`) : console.log(`Weak`);
-} 
+let passwordValidation_2 = password => password.length > 7 ? `Strong` : `Weak`
+
 let passwordValidation_3 = password => {
   password = password.toString()
   return password.length > 7 && typeof password === 'string' ? 
-    console.log(`Strong`) : 
-    console.log(`Weak`);
+    `Strong` : 
+    `Weak`
 } 
 
 const advancedPasswordValidation = password => {
   String(password);
-  return password.length > 7 && password.match(/[A-Z]+/) ? 
-    console.log(`Very Strong`) : password.length > 7 ?
-    console.log(`Strong`) : 
-    console.log(`Weak`);
+  return password.length > 7 && password.match(/[A-Z]/) 
+  ? `Very Strong` 
+  : password.length > 7  ? `Strong` 
+  :  `Weak`;
 }
 
-passwordValidation_1('213123ededed') // strong
-passwordValidation_2('4545') // strong 
-passwordValidation_3('blablab2323') // strong
 
-advancedPasswordValidation('g123ggfFffffh') //very strong
-advancedPasswordValidation('g123ggffffffh') // strong
-advancedPasswordValidation('g12F3g') // weak
+console.log(`
+${passwordValidation_1('213123ededed')}
+--
+${passwordValidation_2('4545')}
+--
+${passwordValidation_3('blablab2323')}
+--
+${advancedPasswordValidation('g123Gffffffh')}
+--
+${advancedPasswordValidation('g123gffffffh')}
+--
+${advancedPasswordValidation('g12F3g')}
+`);

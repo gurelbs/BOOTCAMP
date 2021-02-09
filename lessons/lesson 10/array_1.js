@@ -34,7 +34,7 @@ console.log(people);
 let loopWithStop = () => {
   for (let i=0; i < people.length;i++){
     console.log(people[i]);
-    if (people[i] === 'Mary') return
+    if (people[i] === 'Mary') break
   }
 }
 loopWithStop()
