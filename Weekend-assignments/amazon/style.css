@@ -69,9 +69,9 @@
     }
     .navbar > .search-container {
         flex-grow: 2;
+        justify-content: stretch;
         position: relative;
         margin: auto 1rem;
-        max-width: 50%;
     }
     .navbar .search-input{
         width: 100%;
@@ -140,6 +140,10 @@
         align-items: center;
         margin: auto;
         height: calc(3rem - 1px);
+        border: 1px solid transparent;
+    }
+    .deliver-to a,.navbar ul li,.main-nav ul li a{
+        border: 1px solid transparent;
     }
     .deliver-to a:hover,.navbar ul li:hover,.main-nav ul li a:hover{
         border: 1px solid white;
@@ -173,6 +177,9 @@
         padding: .25rem .1rem;
         margin:  auto 0;
         font-size: .85rem;
+    }
+    .back-to-result {
+        margin: 1rem;
     }
     .back-to-result p a {
         color: #333;
@@ -467,7 +474,7 @@
     .main-order-border-wrap .deliver-to:hover {
         color: red;
     }
-    .deliver-to::before{
+    .main-order-border-wrap .deliver-to::before{
         content: url('https://m.media-amazon.com/images/G/01/AUIClients/DeliveryStaticPackard-pin_desktop_1x-c944b6819f9e5642fdfd4ff3d1109d60d66d8f87._V2_.png');
         padding: 0;
         margin: 0 1rem 0 0;
