@@ -1,12 +1,9 @@
 // 1
 const isString = (str, cb) => {
-    if (typeof str === 'string'){
-        cb(str)
-    }
+    if (typeof str === 'string') cb(str)
 }
 const logTheString = string => console.log(string);
 isString('yes! log The String', logTheString )
-
 // 2
 
 const firstWordUpperCase = (str, cb) => {
