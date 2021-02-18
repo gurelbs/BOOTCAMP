@@ -11,6 +11,7 @@ const tribonacci = (signature,n) => {
     .slice(0,arr.length - 3)
     .join(', ')
 }
+
 // check
 console.log(`
 signature is [1,1,1] ---> ${tribonacci([1,1,1],10)}
