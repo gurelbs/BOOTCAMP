@@ -10,11 +10,14 @@ const duplicates = str => {
         return result.length;
 }
 // check
-console.log(duplicates('abcdefg'));
-console.log(duplicates('abBbcddddefg'));
+console.log(duplicates('aaaaaaaaabbcdefghabcdse'));
+console.log(duplicates('hello world'));
+console.log(duplicates('jav script'));
 
 // another answer with set() and regEx 
-const duplicate2 = str => new Set(str.toLowerCase().match(/(.)(?=.*\1)/gi)).size
+
+// const duplicate2 = str => new Set(str.toLowerCase().match(/(.)(?=.*\1)/gi)).size
+
 // check
-console.log(duplicate2('abcdefg'));
-console.log(duplicate2('abBbcddddefg'));
+// console.log(duplicate2('abcdefg'));
+// console.log(duplicate2('abBbcddddefg'));
