@@ -33,6 +33,6 @@ const myMap = (arr,cb) => {
 }
 
 // check myMap function
-console.log(myMap(words,word => word.length));
+console.log(myMap(words,word => word.length)); // (6) [5, 5, 5, 9, 11, 7]
 console.log(words = myMap(words,word => word+=word));
-console.log(myMap(words,word => word.length));
+console.log(myMap(words,word => word.length)); // (6) [10, 10, 10, 18, 22, 14]

@@ -8,5 +8,5 @@ const organizeStrings = (str1,str2) => {
 }
 
 // check
-console.log(organizeStrings('xxabacddhhhsfdfsdfsdfsdfsfve','wferfrferferhhhgerrbbxyxxyzefga'));
-console.log(organizeStrings('habcidef','abcdjkefg'));
+console.log(organizeStrings('xxabacddhhhsfdfsdfsdfsdfsfve','wferfrferferhhhgerrbbxyxxyzefga')); // 'abcdefghrsvwxyz'
+console.log(organizeStrings('habcidef','abcdjkefg')); //'abcdefghijk'

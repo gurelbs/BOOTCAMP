@@ -7,4 +7,5 @@ const growthOfPopulation = (p0, percent, aug, p) => {
     return n
 }
 
+// check
 console.log(growthOfPopulation(1500000, 2.5, 10000, 2000000));

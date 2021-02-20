@@ -7,7 +7,7 @@ const uniqNum = arr => {
     }
 }
 
-
+// check
 console.log(uniqNum([1,1,1,1,0.3,1,1,]));
 console.log(uniqNum([1,1,1,1,3,1,1,]));
 console.log(uniqNum([1,1,1,13,1]));

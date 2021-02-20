@@ -11,6 +11,6 @@ const sumOfLowest = arr => {
     return (newArr[0] + newArr[1]) || 'please check again with minimum 4 positive integers numbers. \nfloats or non-positive integers should not passed'
 }
 
-
-console.log(sumOfLowest( [100,-20,-30, -343445353, -3453445]));
-console.log(sumOfLowest( [100,20,30, 343445353, 3453445]));
+// check
+console.log(sumOfLowest( [100,-20,-30, -343445353, -3453445])); //should not passed: contain  non-positive numbers
+console.log(sumOfLowest( [100,20,30, 343445353, 3453445])); // return 50

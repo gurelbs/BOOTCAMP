@@ -8,5 +8,6 @@ const summation = num => {
     return answer || 'please check again with integer and positive number'
 }
 
+// check
 console.log(summation(10));
 console.log(summation(-10));

@@ -1,6 +1,5 @@
 const yesOrNo = bool => bool !== true ? 'No' : 'Yes'
 
-console.log(`
-${yesOrNo(true)}
-${yesOrNo(false)}
-`);
+// check
+console.log(yesOrNo(true))
+console.log(yesOrNo(false))

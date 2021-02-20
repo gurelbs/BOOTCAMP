@@ -14,7 +14,7 @@ const calc2 = (operator, num1,num2) => {
     : `I can't calculate ${num1}${operator}${num2}... operator not found`
 }
 
-// check Solution
+// check Solutions
 console.log(`\nSolution with eval:\n`);
 console.log(calc('*',5,7));
 console.log(calc('+',5,7));
