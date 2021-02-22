@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smily</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            max-width: 100vw;
+            height: 100vh;
+            
+            background: #333;
+        }
+        .container{
+            text-align: center;
+            background: #333;
+            color: white;
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="text">how many smily do you want to see?</label>
+        <input class="txt" type="number">
+        <input class="btn" type="button" value="submit">
+    </div>
+    <script>
+    let txt = document.querySelector('.txt');
+    let btn = document.querySelector('.btn');
+    let container = document.querySelector('.container');
+
+    let smile = document.createElement('img');
+    let imgWrap = document.createElement('div');
+    let reset = document.createElement('button');
+    let fail = document.createElement('p');
+    container.appendChild(imgWrap);
+    container.appendChild(fail);
+    imgWrap.style.width = '50%';
+    imgWrap.style.margin = '1rem auto';
+    reset.style.display = 'block'
+    reset.style.width = '100%'
+    reset.innerHTML = 'reset'
+    smile.src = 'https://lh3.googleusercontent.com/proxy/j6V4dgmNDNVvx1eRKjpRTCKfLxAoqcDxBTO3Jk_af_422c_oltPnKlhrrEfecRTkigw6qHMcRlVOKMv0ILmJ2ZSZNtbCjbSYr80PSA'
+    smile.style.width = '50px'
+    smile.style.height = '50px'
+
+    btn.addEventListener('click', () => {
+        for (let i = 0; i < txt.value; i++) {
+            imgWrap.appendChild(smile.cloneNode(true)); 
+            imgWrap.appendChild(reset)
+            reset.addEventListener('click', () => location.reload())
+        }
+    })
+    </script>   
+</body>
+</html>

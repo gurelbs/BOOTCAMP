@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.1-font-size</title>
+    <style>
+        body{
+            text-align: center;
+            background: #000;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button{
+            padding: 0.15rem 3rem;
+            margin: 1rem;
+            background-color: transparent;
+            border: 1px solid orange;
+            color: white;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">Hello Bootcamp!</h1>
+    <button class="plus">+</button>
+    <button class="minus">-</button>
+    <script>
+        let h1 = document.querySelector('.h1');
+let minus = document.querySelector('.minus');
+let plus = document.querySelector('.plus');
+
+let currentFontSize = document.createElement('h2');
+document.body.appendChild(currentFontSize)
+
+plus.addEventListener('click', () => {
+    currentSize = parseFloat(window.getComputedStyle(h1, null).getPropertyValue('font-size'));
+    if (currentSize < 100){
+        h1.style.fontSize = (currentSize + 1) + 'px';
+    }
+    currentFontSize.innerHTML = `${currentSize}px`
+})
+minus.addEventListener('click', () => {
+    style = window.getComputedStyle(h1, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    if (currentSize > 6){
+        h1.style.fontSize = (currentSize - 1) + 'px';
+    }
+    currentFontSize.innerHTML = `${currentSize}px`
+
+})
+    </script>
+</body>
+</html>

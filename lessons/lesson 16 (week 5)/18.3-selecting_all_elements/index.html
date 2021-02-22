@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.3-selecting_all_elements</title>
+</head>
+<body>
+    <div id="myFirstDiv"></div>
+    <div id="mySecondDiv"></div>
+    <div id="myThridDiv"></div>
+    <div id="myFourthDiv"></div>
+
+    <script>
+        const div = document.querySelectorAll('div');
+        div.forEach(el => {
+            el.style.height = '100px'
+            el.style.width = '100px'
+        })
+        div[0].style.backgroundColor = 'blue'
+        div[1].style.backgroundColor = 'silver'
+        div[2].style.backgroundColor = 'yellow'
+        div[3].style.backgroundColor = 'red'
+    </script>
+</body>
+</html>
