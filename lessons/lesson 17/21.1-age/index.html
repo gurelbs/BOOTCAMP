@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #333;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let wrap = document.createElement('div');
+        let h1 = document.createElement('h1');
+        let input = document.createElement('input');
+        let btn = document.createElement('button');
+        h1.innerHTML = 'please enter your age'
+        btn.innerHTML = 'submit'
+        wrap.appendChild(h1)
+        wrap.appendChild(input)
+        wrap.appendChild(btn)
+        btn.style.display = 'block';
+        btn.style.margin = '.25rem auto';
+        document.body.appendChild(wrap)
+
+        let msg = document.createElement('p')
+        wrap.appendChild(msg)
+        const handleAge = e => {
+        let val = input.value;
+        !isNaN(val)
+        ? val >= 18 
+            ? msg.textContent = 'you can drink appear' 
+            : msg.textContent = 'you’re too young'
+        : msg.textContent = 'try again with some number'
+        }
+
+        btn.addEventListener('click', handleAge)
+    </script>
+</body>
+</html>

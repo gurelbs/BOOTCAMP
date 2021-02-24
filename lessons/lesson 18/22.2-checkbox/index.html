@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.2-checkbox</title>
+</head>
+<style>
+    .visibilityToggle{
+        visibility: hidden;
+    }
+    input{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+    <input type="checkbox">
+    <img src="https://source.unsplash.com/random/300x300">
+    <script>
+        let checkbox = document.querySelector('input[type="checkbox"]')
+        let img = document.querySelector('img')
+        checkbox.addEventListener('click', () => !img.classList.toggle('visibilityToggle'))
+    </script>
+</body>
+</html>

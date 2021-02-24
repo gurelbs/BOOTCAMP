@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.1-forms</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #333;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        form {
+            border: 1px solid rgb(155, 155, 155);
+            border-radius: 7px;
+            width: max-content;
+            padding: 1rem 2rem;
+            margin: 0 auto;
+            
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            padding: .5rem 0;
+        }
+        input{
+            position: relative;
+            width: 100%;
+            padding: .5rem;
+        }
+        input[type='submit']{
+            padding: 1rem;
+            margin: 1rem 0 .25rem;
+            background-color: green;
+            border: 0;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: .1s ease-in-out;
+        }
+        input[type='submit']:active{
+            transform: scale(.95);
+            transition: .1s ease-in-out;
+            color: white;
+            background-color: rgb(6, 85, 6);
+        }
+        .text-box{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 30px;
+        }
+        .text-box button {
+            margin: 1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name">
+        <label for="age">age:</label>
+        <input type="date" name="age" id="age">
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email">
+        <input type="submit" value="submit">
+    </form>
+    <div class="text-box"></div>
+    <script>
+        let form =  document.querySelector('form');
+        let textBox = document.querySelector('.text-box');
+        let name = document.querySelector('input[type="text"]');
+        let age = document.querySelector('input[type="date"]');
+        let email = document.querySelector('input[type="email"]');
+        let submit = document.querySelector('input[type="submit"]');
+        let ok = document.createElement('button');
+        let tryAgain = document.createElement('button');
+        let data = ``
+        ok.textContent = 'O.k!'
+        tryAgain.textContent = 'try again'
+
+        submit.addEventListener('click', e => {
+            e.preventDefault()
+            data = `here is your details:<br>${name.value}<br>${age.value}<br>${email.value}<br>`
+            textBox.innerHTML = `${data}`
+            name.value
+            textBox.appendChild(ok)
+            textBox.appendChild(tryAgain)
+        })
+        ok.addEventListener('click', e => {
+            e.preventDefault()
+            textBox.innerHTML = `congratulations you successfully sent this form`
+        })
+        tryAgain.addEventListener('click', e => {
+            e.preventDefault()
+            data.innerHTML = ``
+            textBox.innerHTML = ``
+        })
+    </script>
+</body>
+</html>

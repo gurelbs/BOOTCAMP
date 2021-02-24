@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Race 🏎</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <h1 class="text-center">Race</h1>
+    </div>
+    <hr />
+    <!-- You race HTML code here -->
+    <table class="racer-table">
+      <p>click Right (&#8594;) to move player 1</p>
+      <p>click `a` to move player 2</p>
+      <tr id="player1-race">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="finish"></td>
+      </tr>
+      <tr id="player2-race">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="finish"></td>
+      </tr>
+    </table>
+    <hr />
+    <script>
+      let table = document.querySelector(`table`);
+      let car1 = document.querySelector(`#player1-race > .active`);
+      let car2 = document.querySelector(`#player2-race > .active`);
+      let msg = document.createElement('h1');
+      msg.style.color = 'green'
+      msg.style.margin = '0 auto'
+      msg.textContent = `the winner is... `
+      let movecar = car => {
+        car.nextElementSibling.classList.add('active')
+        car.classList.remove('active')
+        if (car.nextElementSibling.classList.contains('finish')){
+          document.body.removeEventListener('keydown', game)
+          let playagain = document.createElement('button')
+          playagain.textContent = 'play again'
+          playagain.classList.add('playagain')
+          playagain.addEventListener('click', () => location.reload())
+          document.body.insertAdjacentElement("afterend", playagain)
+        }
+      }
+      const game = e => {
+        if (e.key === 'ArrowRight') {
+          movecar(car1)
+          car1 = document.querySelector(`#player1-race > .active`);
+          if (car1.classList.contains('finish') && !car2.classList.contains('finish')){
+            msg.textContent += `player 1!`
+          }
+        }
+        if (e.key === `a`){
+          movecar(car2)
+          car2 = document.querySelector(`#player2-race > .active`);
+          if (car2.classList.contains('finish') && !car1.classList.contains('finish')){
+            msg.textContent += `player 2!`
+          }
+        }
+        document.body.appendChild(msg)
+      }
+      document.body.addEventListener('keydown', game) 
+    </script>
+  </body>
+</html>
+ 

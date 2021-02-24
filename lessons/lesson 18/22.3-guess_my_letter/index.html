@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.3-guess_my_letter</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    .guess{
+        border: 1px solid black;
+        width: fit-content;
+        margin: 0 auto;
+        padding: .5rem 1rem;
+        border-radius: 7px;
+    }
+    .playAgain{
+        display: block;
+        margin: 1rem auto;
+        padding: .25rem 2rem;
+        background-color: rgb(58, 58, 58);
+        color: white;
+        border: 0;
+    }
+</style>
+<body>
+    <h1>welcome to guess my letter</h1>
+    <div class="guess">?</div>
+    <h2 class="msg"></h2>
+    <div>
+        <h2>keys guessed</h2>
+        <p></p>
+    </div>
+
+    <script>
+        allLetters = 'abcdefghijklmnopqrstuvwxyz'.split('')
+        randomLetter = () => Math.floor(Math.random() * allLetters.length)
+        pickLetter = allLetters[randomLetter()]
+
+        let guess = document.querySelector('.guess')
+        let msg = document.querySelector('.msg')
+        let userGuessed = document.querySelector('p')
+        const game = e => {
+            let userPress = e.key.match(/[a-zA-Z]/g) || 0
+            if (pickLetter === userPress[0]) {
+                guess.textContent = pickLetter 
+                msg.textContent = `Right letter!` 
+                msg.style.color = 'green'
+                let playAgain = document.createElement('button')
+                playAgain.textContent = 'playAgain'
+                playAgain.classList.add('playAgain')
+                playAgain.addEventListener('click', ()=> location.reload())
+                msg.appendChild(playAgain)
+                document.body.removeEventListener('keydown', game)
+            } else if (userPress !== null && userPress.length===1){
+                msg.textContent = `Nope, wrong letter`
+                msg.style.color = 'red'
+                if (!userGuessed.textContent.includes(userPress)){
+                    userGuessed.textContent += `${userPress},`
+                } else {
+                    msg.textContent = `${userPress} has already been guessd!`
+                }
+            } else {
+                msg.textContent = `please enter a valid letter`
+                msg.style.color = 'red'                
+            }
+        }
+        document.body.addEventListener('keydown', game)
+    </script>
+</body>
+</html>

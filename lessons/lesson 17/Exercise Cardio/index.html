@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let wrapper  = document.createElement('div');
+        document.body.appendChild(wrapper)
+        wrapper.classList.add('wrapper')
+
+        let ul = document.createElement('ul');
+        let liCreate = () => document.createElement('li');
+        let li1 = liCreate()
+        let li2 = liCreate()
+        let li3 = liCreate()
+        li1.innerHTML = 'one'
+        li2.innerHTML = 'two'
+        li3.innerHTML = 'tree'
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+        wrapper.appendChild(ul)
+
+        let img = document.createElement('img')
+        img.src = 'https://source.unsplash.com/random'
+        img.style.width = '250px'
+        img.classList.add('cute')
+        img.alt = 'cute puppy'
+
+        wrapper.appendChild(img)
+
+        const div = document.createElement('div')
+        div.innerHTML = `
+                <p>this is paragraph 1</p>
+                <p>this is paragraph 2</p>`;
+        ul.insertAdjacentElement('beforebegin',div)
+        ul.previousElementSibling.lastElementChild.classList.add('warning')
+        ul.previousElementSibling.firstElementChild.remove()
+        const generatePlayerCard  = (name, age, height) => {
+            let card = document.createElement('div')
+            card.innerHTML = `<div class="playerCard">
+            <h2>${name} — ${age}</h2>
+            <p>They are ${height} and ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!</p>
+            <button>click to remove!</button>
+            </div>`
+            return card
+        }
+        let cards = document.createElement('div')
+        cards.classList.add('cards')
+        cards.appendChild(generatePlayerCard('blabla',4,'1m'))
+        cards.appendChild(generatePlayerCard('BOOboo',5,'2m'))
+        cards.appendChild(generatePlayerCard('nice',6,'3m'))
+        cards.appendChild(generatePlayerCard('gosha',7,'4m'))
+
+        cards.childNodes.forEach(el => {
+            el.firstChild.lastElementChild.addEventListener('click', () => {
+                el.remove()
+            })
+        })
+        wrapper.insertAdjacentElement('beforebegin', cards)
+    </script>
+</body>
+</html>

@@ -30,7 +30,7 @@
 <body>
     <div class="container">
         <label for="text">how many smily do you want to see?</label>
-        <input class="txt" type="number">
+        <input class="txt">
         <input class="btn" type="button" value="submit">
     </div>
     <script>
@@ -52,12 +52,16 @@
     smile.src = 'https://lh3.googleusercontent.com/proxy/j6V4dgmNDNVvx1eRKjpRTCKfLxAoqcDxBTO3Jk_af_422c_oltPnKlhrrEfecRTkigw6qHMcRlVOKMv0ILmJ2ZSZNtbCjbSYr80PSA'
     smile.style.width = '50px'
     smile.style.height = '50px'
-
     btn.addEventListener('click', () => {
-        for (let i = 0; i < txt.value; i++) {
-            imgWrap.appendChild(smile.cloneNode(true)); 
-            imgWrap.appendChild(reset)
-            reset.addEventListener('click', () => location.reload())
+        if (Number.isInteger(parseInt(txt.value))) {
+            for (let i = 0; i < parseInt(txt.value); i++) {
+                imgWrap.appendChild(smile.cloneNode(true)); 
+            }
+            container.insertAdjacentElement('beforeend',reset)
+            reset.addEventListener('click', () => imgWrap.innerHTML = '')
+        } else {
+            alert('try again with number')
+            txt.value = ''
         }
     })
     </script>   
