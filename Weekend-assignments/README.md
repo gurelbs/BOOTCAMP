@@ -8,4 +8,8 @@
 
 ## 3) <a href="https://github.com/gurelbs/abazon">amazon Website code</a>.
 > <a href="https://abazon.cf/">click here to live demo</a>
+## 3) <a href="https://github.com/gurelbs/BOOTCAMP/tree/main/Weekend-assignments/JS-Weekend-Excercises">JS Weekend Excercises</a>.
+> <a href="https://abazon.cf/">26 JavaScript Excercises </a>
+## 3) <a href="https://github.com/gurelbs/minecraft">Minecraft game</a>.
+> <a href="https://minecrafti.cf/">click here to live demo</a>
 
