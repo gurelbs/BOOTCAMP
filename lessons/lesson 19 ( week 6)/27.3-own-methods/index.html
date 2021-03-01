@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27.3-own-methods</title>
+</head>
+<body>
+    <script>
+        //  my filter method
+
+        Array.prototype.myFilter = function(cb){
+            const newArr = []
+            for (let i = 0; i < this.length; i++){
+                if (cb(this[i])) newArr.push(this[i])
+            }
+            return newArr
+        }
+        // check my filter method
+        const arr1 = [10000,2,'niceddd',3,4,15,'8']
+        let filterArr1 = arr1.myFilter( e => e.length === 7)
+        let filterArr2 = arr1.myFilter( e => e > 7)
+        console.log(filterArr1);
+        console.log(filterArr2);
+
+        // my find method
+        Array.prototype.myFind = function(cb){
+            for (let i = 0; i < this.length; i++){
+                if (cb(this[i])) return this[i]
+            }
+        }
+
+        // check my find method
+        let arr2 = [1,10,90,45,8,57]
+        console.log(arr2.myFind(e => e > 46));
+
+
+        // my reduce method
+
+        Array.prototype.myReduce = function(cb){
+            let a = null;
+            for (let i = 0; i < this.length; i++){
+                cb(a+=this[i])
+            }
+            return a
+        }
+
+        let arr3 = [1,2,3,4,5,6,7,8,9,10]
+        console.log(arr3.myReduce((prev, next) => prev + next));
+    </script>
+</body>
+</html>

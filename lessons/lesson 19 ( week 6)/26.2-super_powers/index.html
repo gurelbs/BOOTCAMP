@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const storm = {
+        superPower: 'flyng',
+        weather: ['summer', 'spring', 'winter']
+    }
+    function printSuperPower() {
+        console.log("my superpower is " + this.superPower);
+    }
+    function pickRandomSeasons() {
+        const random = Math.floor(Math.random() * this.weather.length)
+        console.log(`my faborite seasons is ${this.weather[random]}`);
+    }
+    storm.pickRandomSeasons = pickRandomSeasons
+    storm.printSuperPower = printSuperPower
+    storm.printSuperPower()
+    storm.pickRandomSeasons()
+    console.log(storm);
+    </script>
+</body>
+</html>

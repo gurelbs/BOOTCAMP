@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26.1-fundamentals_of_this</title>
+</head>
+<body>
+    <div class="element"></div>
+    <script>
+        "use strict"
+        // 1 
+        // console.log(this) will print the main window object itself
+        // console.log(this);
+        // 2a
+        // to the function or the method who invoked 'this'
+        // 2b
+    const myObj = {
+        name: "Timmy",
+        greet: function() {
+            console.log(`Hello ${this.name}`);
+        },
+    };
+    myObj.greet();
+    // 3
+    const myFuncDec = function () {
+        console.log(this);
+    };
+    // myFuncDec() point to the main window object becouse myFuncDec() is a function
+    // and 'this' is not bind to anywhere
+    // 4
+    const myFuncArrow = () => {
+        console.log(this);
+    };
+    // myFuncArrow();
+    // same is normal function we get the window object but this is happen becouse 
+    // arrow function is inherit from the parent
+    // 5
+    document.querySelector(".element").addEventListener(
+        () => this,console.log(this)
+        );
+    </script>
+</body>
+</html>
