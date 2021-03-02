@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31.1-aync_await</title>
+</head>
+<body>
+    <script>
+
+    // const getIDs = async () => new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve([532, 543, 753, 1, 5]);
+    //     }, 1500);
+    // });
+    
+    // const getRecipe = (recipeID) => new Promise((resolve, reject) => {
+    //     setTimeout((ID) => {
+    //         const recipe = {
+    //             title: "Fresh tomato pasta",
+    //             publisher: "Pinchas Hodadad",
+    //         };
+    //             resolve(`${ID}: ${recipe.title}`);
+    //         }, 1500, recipeID
+    //     );
+    // });
+
+    // getIDs()
+    //     .then((IDs) => {
+    //     console.log(IDs);
+    //     return getRecipe(IDs[2]);
+    // })
+    // .then((recipe) => {
+    //     console.log(recipe);
+    // })
+    // .catch((error) => {
+    //     console.log("It is an error!");
+    // });
+
+    // async answer
+
+    const getIDs = async () => setTimeout(() => {
+        let res = await [532, 543, 753, 1, 5]
+        return res[0]
+    }, 1500)
+    
+    const getRecipe = async (recipeID) => await setTimeout((ID) => {
+            const recipe = {
+                title: "Fresh tomato pasta",
+                publisher: "Pinchas Hodadad",
+            };
+                console.log(`${ID}: ${recipe.title}`);
+            }, 1500, recipeID
+        );
+
+    getIDs()
+        .then((IDs) => {
+        console.log(IDs);
+        return getRecipe(IDs[2]);
+    })
+    .then((recipe) => {
+        // console.log(recipe);
+    })
+    .catch((error) => {
+        console.log("It is an error!");
+    });
+    </script>
+</body>
+</html>
