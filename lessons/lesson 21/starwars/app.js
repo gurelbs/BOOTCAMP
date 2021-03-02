@@ -48,5 +48,4 @@ const displayData = () => {
     })})
     document.body.appendChild(table)
 }
-
 fetchData()
