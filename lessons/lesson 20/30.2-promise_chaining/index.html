@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30.2-promise_chaining</title>
+</head>
+<body>
+    <script>
+        // arrays
+        const trueArr = ['its','work','nice','in','javascript']
+        const falseArr = [...trueArr,0]
+        // functions
+        const makeAllCaps = arr => arr.map(word => word[0].toUpperCase() + word.slice(1,word.length))
+        const sortWord = arr => arr.sort()
+        const handleErr = arr => {
+            for (let word of arr) {
+                if (typeof word !== 'string') console.error(`the type of ${word} isn't a string!!! `)
+            }
+        }
+        // promise
+        const promiseArr = arr => new Promise((res) => res(arr))
+        // check trueAnswer
+        let trueAnswer = promiseArr(trueArr)
+            .then(sortWord(trueArr))
+            .then(() => makeAllCaps(trueArr))
+            .then(val => console.log(val))
+            .catch(() => handleErr(trueArr))
+        // check falseAnswer
+        let falseAnswer = promiseArr(falseArr)
+            .then(sortWord(falseArr))
+            .then(() => makeAllCaps(falseArr))
+            .then(val => console.log(val))
+            .catch(() => handleErr(falseArr))
+    </script>
+</body>
+</html>
