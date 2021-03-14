@@ -1,7 +1,7 @@
 const $ = x => document.querySelector(x)
 const $1 = x => document.createElement(x)
 const toDoApp = $('.to-do-app')
-
+const jsdom = require("jsdom");
 class Todo {
     constructor() {
         this.list = []
@@ -35,7 +35,8 @@ class Todo {
         this.list.push({
             id: this.id,
             taskName,
-            isCompleted: this.isCompleted
+            isCompleted: this.isCompleted,
+            date: Date.now()
         })
         this.id++
     }
@@ -80,8 +81,7 @@ class Todo {
 let toDo = new Todo()
 const container = $('.container')
 const addTodoBtn = $('.add-todo')
-const addTodoInput = $('.what-to-do')
-
+let addTodoInput = $('.what-to-do')
 
 addTodoInput.classList.add('unvisible')
 
