@@ -2,21 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const data = ["hello", "world"];
+  const number1 = 5;
+  const number2 = 6;
+  const string = 'I love React!'
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>{data[0]} {data[1]}</p>
+        <p>{number1}+{number2}={number1+number2}</p>
+        <p> The string’s ({string}) length is {string.length}</p>
       </header>
     </div>
   );
