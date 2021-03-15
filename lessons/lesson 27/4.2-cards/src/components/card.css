@@ -1,0 +1,31 @@
+.card-wrap{
+    margin: 1vh auto;
+    background: #fff;
+    box-shadow: 0 0 10px black, 0 0 3px #eee;
+    min-height: 10vh;
+}
+.card-wrap img {
+    height: auto;
+    width: 100%;
+}
+.card-wrap h1{
+    padding: 1vh;
+    font-weight:calc( 1rem + .5vw);
+}
+.card-wrap p{
+    padding: 1vh;
+    word-wrap: break-word;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.card-wrap a{
+    text-align: left;
+    text-decoration: none;
+    padding: 1vh;
+    color: orange;
+    text-shadow: 0 0 .05vw black;
+    display: inline-block;
+    margin: 1vw;
+    position: relative;
+}
