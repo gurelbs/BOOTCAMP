@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    place-items: center;
+}
+.box{
+    animation: anima 1s ease-in-out ;
+    margin: 0 0 1vw 0;
+}
+/* .box:nth-child(1){
+    animation-duration: 1s;
+}
+.box:nth-child(2){
+    animation-delay: .1s;
+}
+.box:nth-child(3){
+    animation-delay: .2s;
+}
+.box:nth-child(4){
+    animation-delay: .3s;
+}
+.box:nth-child(5){
+    animation-delay: .4s;
+} */
+@keyframes anima {
+    from{
+        opacity: .5;
+        transform: translateX(-100%);
+    } to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
