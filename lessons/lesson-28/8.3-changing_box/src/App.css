@@ -1,0 +1,19 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  background: #333;
+
+}
+.box{
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  transition: .3s ease-in-out;
+}
+
+.circle{
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+}
