@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.App{
+    min-height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+form{
+    box-shadow: 0 0 1vw black;
+    margin: 3vh;
+    min-width: 30vw;
+    min-height: 50%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+form input,form label,form textarea{
+    display: block;
+    margin: .25vw auto;
+    width: 90%;
+}
+form input,form textarea,.btn{
+    outline: 0;
+    border: .1vw solid orange;
+    color: white;
+    background-color: transparent;
+    font-size: 2vw;
+}
+.btn-wrap{
+    margin: 2vw auto;
+}
+.btn{
+    place-items: center;
+    padding: .25vw 1.5vw;
+}
+form label{
+    font-size: 1vw;
+    color: rgb(199, 199, 126);
+    text-transform: uppercase;
+}
+.details{
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    padding: .5vw 0;
+}
+.details h1{
+    text-align: center;
+    font-size: 2vw;
+}
+.details p{
+    border-bottom: 1px solid white;
+    padding: 1vw;
+    font-size: 1vw;
+    max-width: 30vw;
+    word-wrap: break-word;
+    margin: 0 auto;
+}
+.details .yellow{
+    color: yellow;
+    text-transform: uppercase;
+}
+.details button{
+    margin: 1vw auto;
+    padding: .5vw;
+    width: 50%;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid yellow;
+    border-radius: 7px;
+    color: orange;
+}
