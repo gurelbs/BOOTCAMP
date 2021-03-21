@@ -13,5 +13,6 @@
 ## 5) <a href="https://github.com/gurelbs/minecraft">Minecraft game</a>.
 > <a href="https://minecrafti.cf/">click here to live demo</a>
 ## 6) <a href="https://github.com/gurelbs/CovidAPI">Covid-19 API</a>.
-> <a href="https://covidata.cf/">click here to live demo</a>
+## 7) <a href="https://github.com/gurelbs/rollit">rollit dice game - REACT.js</a>.
+> <a href="https://rollit.cf/">click here to live demo</a>
 
