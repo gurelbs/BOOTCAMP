@@ -18,4 +18,5 @@ const Card = ({name,birthday,favoriteFish,favoriteMeats}) => {
     );
 }
 
+log
 export default Card;

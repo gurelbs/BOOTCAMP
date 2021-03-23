@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: #333;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.sync-wrap{
+  display: flex;
+  height: 100%;
+  margin: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sync-wrap i {
+  font-size: 2.5vw;
+}
+.sync-wrap i:hover{
+  color: rgb(90, 202, 90);
+  animation: spinner 1s linear infinite;
+}
+.sync-wrap i:active{
+  animation: 0;
+}
+.number{
+  width: 20%;
+}
+.number input[type="number"]::placeholder{
+  width: max-content;
+  color: white;
+  font-size: .8vw;
+}
+.input-wrap{
+  position: relative;
+  background-color: rgb(12, 12, 12);
+  display: flex;
+}
+.input-wrap input {
+  margin: 1vw auto;
+  padding: 1vw;
+  width: 50%;
+  background-color:transparent;
+  border: 0;
+  border-bottom: .05vw solid rgb(27, 27, 27);
+  outline: 0;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: white;
+}
+.avatars{
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width:100%;
+  margin: 0 auto;
+}
+.avatar{
+  flex-grow: 1;
+  box-shadow: 0 0 1vw black;
+  border: .1vw solid rgba(255, 255, 255, 0.301);
+  border-radius: .5vw;
+  padding: .5vw;
+  margin: .5vw;
+  transition: .15s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.avatar:hover{
+  box-shadow: 0 0 1vw black,0 0 .3vw white;
+  transform: scale(1.025);
+}
+.avatar .name{
+  text-transform: uppercase;
+  font-size: 1.2vw;
+}
+.avatar .email,.avatar .phone,.avatar .age, .avatar .gender{
+  text-transform: uppercase;
+  font-size: .9vw;
+  background-color: rgb(78, 78, 78);
+  border-radius: .2vw;
+  position: relative;
+  margin: .25vw;
+  display: block;
+}
+.avatar .user-img{
+  width: auto;
+  height: 100%;
+}
+.spinner-wrap{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.spin-anima{
+  animation: spinner .5s linear infinite;
+}
+.spinner{
+  width: 100px;
+  height: 100px;
+  border: 0;
+  border-top: .5vw solid transparent;
+  border-bottom: .5vw solid transparent;
+  border-left: .2vw solid black;
+  border-right: .2vw solid white;
+  border-radius: 50%;
+}
+@keyframes spinner {
+  100%{
+    transform: rotate(360deg);
   }
-  to {
+}
+@keyframes spin {
+  100%{
     transform: rotate(360deg);
   }
 }
