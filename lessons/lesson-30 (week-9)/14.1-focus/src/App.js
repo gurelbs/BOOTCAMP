@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react'
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      userWrite: ''
+    }
+    this.txtInput = React.createRef()
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  focus = () => this.txtInput.current.focus()
+  componentDidMount(){
+    this.focus()
+  }
+  handleWrite = (e) => {
+    this.setState({userWrite: e.target.value})
+  }
+  render(){
+    return (
+      <div className="App">
+        <input 
+          type="text"
+          value={this.state.userWrite}
+          ref={this.txtInput}
+          onChange={this.handleWrite}
+        />
+        <p>{this.state.userWrite}</p>
+      </div>
+    );
+  }
 }
 
 export default App;
