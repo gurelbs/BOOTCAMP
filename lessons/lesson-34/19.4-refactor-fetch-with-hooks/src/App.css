@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.spinner{
+  position: relative;
+  width: 5vw;
+  height: 5vw;
+  border-top: .5vw solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  animation: btn .3s ease-in-out infinite;
+  margin: 0 auto;
+}
+input,button{
+  outline: 0;
+  padding: 1vw;
+  margin: 1vw;
+  text-transform: uppercase;
+}
+.randomeJoke{
+  position: relative;
+}
+.randomeJoke-header{
+  position: relative;
+  padding: 3vw;
+  margin: 3vw;
+}
+.randomeJoke button {
+  position: relative;
+  bottom: 0;
+}
+.categories-btns{
+  background-color: #333;
+  color: white;
+}
+@keyframes btn {
+  100%{
+    transform: rotate(360deg);
+  }
+}
