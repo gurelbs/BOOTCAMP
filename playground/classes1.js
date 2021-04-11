@@ -7,7 +7,5 @@ class Person {
     }
     addStudent(sID, lID) {
         let lec = this.getLecturer().filter(l => l.id === lID)
-        if ()
     }
-
 }

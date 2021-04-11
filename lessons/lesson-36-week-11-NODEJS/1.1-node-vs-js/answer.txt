@@ -1,0 +1,8 @@
+1. control, create and delete file outside of the DOM because Node.js
+    is a runtime environment that allows JS run on the server side
+2. global & proccess Objects because here JS run on the server
+3. add more stuff to JavaScript. nodejS is non-blocking input - output
+
+1. control the element on the DOM because js run on the browser
+2. window & ducoment Objects because its run on the browser
+3. ES standard Modules
