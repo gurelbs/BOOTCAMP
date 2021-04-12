@@ -1,7 +1,8 @@
+const { number } = require('yargs');
 const yargs = require('yargs')
 const argv = yargs.argv
 const [cmd,x,y] = argv._
-
+// option 1
 const calc = () => {
     if (cmd && x && y){
         switch (cmd) {
@@ -28,3 +29,13 @@ const calc = () => {
 }
 
 calc()
+
+// option 2
+
+// yargs.command({
+//     command: 'add',
+//     describe: 'add number1 to number2',
+//     handler: argv => console.log(argv.num1 + argv.num2)
+// })
+// yargs.parse()
+// ...
