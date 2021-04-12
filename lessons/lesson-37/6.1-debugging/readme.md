@@ -1,1 +1,1 @@
-![](6.1-debugging\ss.png)
+![](https://github.com/gurelbs/BOOTCAMP/blob/main/lessons/lesson-37/6.1-debugging/ss.png)
