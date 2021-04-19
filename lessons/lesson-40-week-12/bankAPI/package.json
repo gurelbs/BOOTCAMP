@@ -1,0 +1,15 @@
+{
+  "name": "react-bank-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd back-end && npm run dev\" \"cd front-end && npm start\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "6.0.2"
+  }
+}
