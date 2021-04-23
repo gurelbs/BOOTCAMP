@@ -1,12 +1,14 @@
-import axios from 'axios'
-const pr = process.env.NODE_ENV
-const devMode = pr === 'development'
-const prodMod = pr === 'production'
+import axios from "axios";
 
 let url;
-if (devMode) url = "http://localhost:5000/api" 
-if (prodMod) url = "/api"
+if (process.env.NODE_ENV === "development") {
+  url = "http://localhost:5000/api";
+}
+if (process.env.NODE_ENV === "production") {
+  url = "api";
+}
+const api = axios.create({
+  baseURL: url,
+});
 
-export const api = axios.create({
-    baseURL: url
-})
+export default api;
